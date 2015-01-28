@@ -2,8 +2,6 @@ import smbus
 import math
 import time
 
-
-
 # Copyright (c) 2015, Ingo Schubert (dmidb1@gmail.com)
 # All rights reserved.
 
@@ -27,6 +25,7 @@ import time
 # ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 
 #reads analog input from the address/port specified
 #Returns the digital value (0-1023)
@@ -78,8 +77,8 @@ def writeAnalogOutputPort( i2cPort,  i2cAddress,  dacport, value):
   bus = smbus.SMBus(i2cPort) 
   
   #Calculate high byte and low byte
-  hibyte = int(math.ceil(value / 256))
-  lowbyte = int(value - hibyte * 256)
+  hibyte = (value >> 8) & 0x0F
+  lowbyte = value & 0xFF
   
   #write the lowbyte and hibyte to the address/port of the i2c address
   bus.write_i2c_block_data (i2cAddress, dacport, [lowbyte, hibyte])

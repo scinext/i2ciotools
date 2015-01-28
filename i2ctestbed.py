@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 
+
 # Copyright (c) 2015, Ingo Schubert (dmidb1@gmail.com)
 # All rights reserved.
 
@@ -24,6 +25,7 @@
 # ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 
 
 #Sample script to show the usage of the i2ciotools.py library together with the Horter I2C modules
@@ -74,8 +76,6 @@ except:
   print ("ERROR! The DO module isn't wired or you provided the wrong address")
   
   
-quit()
-
 #Check out all the options to read/write digital input/output
 #Pick the one you like most. 
 

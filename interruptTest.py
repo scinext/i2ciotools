@@ -25,6 +25,10 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+# Sample that shows the usage of the Interrupt signal from the Digital Input Module
+
+
 import RPi.GPIO as GPIO
 import time
 import i2ciotools
